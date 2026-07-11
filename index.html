@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <!-- 🎯 全載具核心天線：加入最標準的縮放網頁視窗雷達，確保行動裝置完美適應 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>巴比美語補習班 | 短期補習服務定型化契約書</title>
+    <style>
+        :root {
+            --uci-blue: #1b3d6d;
+            --uci-gold: #fecc07;
+        }
+        
+        * {
+            box-shadow: none;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .page-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .page {
+            padding: 40px 50px;
+        }
+
+        .contract-header {
+            text-align: center;
+            border-bottom: 3px double var(--uci-blue);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contract-header h1 {
+            color: var(--uci-blue);
+            font-size: 23px;
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+
+        .contract-header h2 {
+            color: var(--uci-blue);
+            font-size: 14px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .section-title {
+            background-color: var(--uci-blue);
+            color: #fff;
+            padding: 8px 12px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 25px 0 10px 0;
+            border-radius: 4px 4px 0 0;
+            display: inline-block;
+        }
+
+        /* 🔒 守護方格地基：死死鎖定傳統表格排版，手機端橫向流暢溢位不跑版 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 13px;
+            table-layout: fixed;
+        }
+
+        th, td {
+            border: 1px solid var(--uci-blue);
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f0f4f8;
+            color: var(--uci-blue);
+            text-align: center; 
+            width: 22%;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        th span.zh-title {
+            font-size: 13px;
+            display: block;
+            font-weight: bold;
+        }
+        th span.en-title {
+            font-size: 10px;
+            display: block;
+            font-weight: normal;
+            opacity: 0.85;
+        }
+
+        td {
+            position: relative;
+            text-align: left;
+        }
+
+        .text-input, .select-input {
+            border: none;
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-family: inherit;
+            font-size: 13px;
+            color: inherit;
+            padding: 4px;
+        }
+
+        .select-input {
+            font-weight: bold;
+            color: #0077b6;
+            cursor: pointer;
+            background-color: rgba(0, 119, 182, 0.05);
+            border-radius: 4px;
+        }
+
+        .text-input:focus, .select-input:focus {
+            background-color: rgba(254, 204, 7, 0.15);
+        }
+
+        .legal-box {
+            border: 1px solid #ccc;
+            background-color: #fafbfc;
+            padding: 20px;
+            height: 380px;
+            overflow-y: scroll;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: left;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        .legal-item {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 15px;
+        }
+
+        .legal-item:last-child {
+            border-bottom: none;
+        }
+
+        .legal-item strong {
+            color: var(--uci-blue);
+            font-size: 14px;
+        }
+
+        .legal-en {
+            color: #555;
+            font-style: italic;
+            display: block;
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        /* ✍️ 手寫簽名板專屬配艙 */
+        .signature-canvas-container {
+            width: 100%;
+            height: 150px;
+            background-color: #fff;
+            border: 1px dashed var(--uci-blue);
+            position: relative;
+            border-radius: 4px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+            display: block;
+        }
+
+        .canvas-clear-btn {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            padding: 4px 8px;
+            font-size: 11px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .agreement-banner {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #c00;
+            margin: 25px 0;
+            padding: 10px;
+            background-color: rgba(204, 0, 0, 0.05);
+            border: 1px solid #c00;
+            border-radius: 4px;
+        }
+
+        .submit-btn-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .submit-btn {
+            background-color: var(--uci-gold);
+            color: var(--uci-blue);
+            border: none;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 8px; }
+            .page { padding: 25px 15px; }
+            .page-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            table { width: 800px; } 
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    <form id="contractForm" action="https://formsubmit.co/bobbyenglishschool@gmail.com" method="POST" onsubmit="prepareSubmit(event)">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" id="formSubject" name="_subject" value="【電子簽約成功】學員短期補習服務契約書回傳通知">
+        <input type="hidden" id="signature_base64" name="家長親筆電子簽名圖檔">
+
+        <!-- 教育部範本必備行政隱形傳輸天線 -->
+        <input type="hidden" id="hidden_tuition" name="[收費明細] 學費">
+        <input type="hidden" id="hidden_materials" name="[收費明細] 教材講義費">
+        <input type="hidden" id="hidden_misc" name="[收費明細] 學雜費">
+        <input type="hidden" id="hidden_schedule" name="[核定修業] 上課時段">
+
+        <div class="page">
+            <div class="contract-header">
+                <h1>巴比美語短期補習班 ｜ 短期補習服務契約書</h1>
+                <h2>Bobby English Cram School - Short-Term Tuition Service Contract</h2>
+                <p style="font-size: 11px; color: #666; margin: 10px 0 0 0;">(依據教育部短期補習班補習服務契約書範本與桃園市最新設立及管理法規制定)</p>
+            </div>
+
+            <!-- 🎯 契約審閱確認條款 -->
+            <div class="privacy-statement" style="background-color: #f0f4f8; padding: 12px; border-left: 4px solid var(--uci-blue); font-size: 13px; margin-bottom: 20px;">
+                <strong>【重要權益：契約審閱權】 / Contract Review Right</strong><br>
+                本定型化契約書於中華民國115年由學員及監護人攜回審閱（契約審閱期間至少為五日）。甲方簽章確認已充分審閱。<br>
+                <span style="color: #555; font-style: italic;">This standard contract was taken home by the student/parent for review (The contract review period shall be at least five days). Signature below confirms full review.</span>
+            </div>
+
+            <div class="section-title">一、立契約書人基本資料 (立約人) / Contracting Parties</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th><span class="zh-title">學員中文姓名 (甲方)</span><span class="en-title">Student Chinese Name</span></th>
+                        <td><input type="text" name="student_name_zh" class="text-input" required></td>
+                        <th><span class="zh-title">學員英文姓名</span><span class="en-title">Student English Name</span></th>
+                        <td><input type="text" name="student_name_en" class="text-input" required></td>
+                    </tr>
+                    <tr>
+                        <th><span class="zh-title">法定代理人/家長</span><span class="en-title">Parent / Guardian</span></th>
+                        <td><input type="text" name="parent_name" class="text-input" required></td>
+                        <th><span class="zh-title">家長身分證字號</span><span class="en-title">Guardian ID No.</span></th>
+                        <td><input type="text" name="parent_id" class="text-input" placeholder="用於法律契約識別" required></td>
+                    </tr>
+                    <tr>
+                        <th><span class="zh-title">聯絡電話</span><span class="en-title">Phone Number</span></th>
+                        <td><input type="tel" name="parent_phone" class="text-input" required></td>
+                        <th><span class="zh-title">通訊地址</span><span class="en-title">Mailing Address</span></th>
+                        <td><input type="text" name="parent_address" class="text-input" required></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="section-title">二、就讀班級與智慧計費雷達 / Course & Billing Selector</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th><span class="zh-title">報名選讀班別</span><span class="en-title">Select Course Name</span></th>
+                        <td colspan="3">
+                            <select id="courseSelector" name="就讀班級名稱" class="select-input" onchange="syncCourseBrain()">
+                                <option value="Let's Go 1">Let's Go 1 美語不害怕!巴比老師的遊戲大膽說1級班 (每週一三五 1:30-3:30 PM)</option>
+                                <option value="Let's Go 2">Let's Go 2 兒童初階美語 Bobby全美語教學 (每週一三五 1:30-3:30 PM)</option>
+                                <option value="Let's Go 3">Let's Go 3 兒童中階美語 中英雙語教學 (週一4:30-6:30 & 週三五1:30-3:30)</option>
+                                <option value="Let's Go 4">Let's Go 4 兒童中階美語 中英雙語教學 (週一4:30-6:30 & 週三五1:30-3:30)</option>
+                                <option value="Let's Go 5">Let's Go 5 兒童高階美語 中英雙語教學 (每週一三五 4:30-6:30 PM)</option>
+                                <option value="Let's Go 6">Let's Go 6 兒童高階美語 中英雙語教學 (每週一三五 4:30-6:30 PM)</option>
+                                <option value="Advance A1">Advance A1 兒童進階美語班 特調班 (每週三五 4:30-6:30 PM)</option>
+                                <option value="Advance A2">Advance A2 兒童進階美語班 (每週二四 4:30-6:30 PM)</option>
+                                <option value="Advance B1 新進">Advance B1 青少年進階美語 - 新進方案 (每週二四 7:00-9:00 PM)</option>
+                                <option value="Advance B1 晉升">Advance B1 青少年進階美語 - 晉升方案 (每週二四 7:00-9:00 PM)</option>
+                                <option value="Advance B2 新進">Advance B2 青少年進階美語 - 新進方案 (每週二四 7:00-9:00 PM)</option>
+                                <option value="Advance B2 晉升">Advance B2 青少年進階美語 - 晉升方案 (每週二四 7:00-9:00 PM)</option>
+                                <option value="Advance C1 新進">Advance C1 青少年最高殿堂 - 新進方案 (每週一 7:00-9:00 PM)</option>
+                                <option value="Advance C1 晉升">Advance C1 青少年最高殿堂 - 晉升方案 (每週一 7:00-9:00 PM)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="zh-title">課程科目內容</span><span class="en-title">Course Content</span></th>
+                        <td colspan="3" style="font-size: 12px; color: #555;">
+                            兒童/青少年美語特訓 (涵蓋 Phonics 自然發音、生活情境對話、聽說讀寫強化訓練)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="zh-title">修業時段及每週時數</span><span class="en-title">Schedule & Hours</span></th>
+                        <td id="td_schedule" colspan="3" style="font-weight: bold; color: var(--uci-blue);">載入中...</td>
+                    </tr>
+                    <tr>
+                        <th><span class="zh-title">(1) 學費</span><span class="en-title">Tuition Fee</span></th>
+                        <td id="td_tuition" style="font-weight: bold; color: #1b3d6d;">-</td>
+                        <th><span class="zh-title">(2) 講義教材費</span><span class="en-title">Materials Fee</span></th>
+                        <td id="td_materials" style="font-weight: bold; color: #1b3d6d;">-</td>
+                    </tr>
+                    <tr>
+                        <th><span class="zh-title">(3) 當期雜費</span><span class="en-title">Miscellaneous Fee</span></th>
+                        <td id="td_misc" style="font-weight: bold; color: #1b3d6d;">-</td>
+                        <th><span class="zh-title">繳費總金額 (1)+(2)+(3)</span><span class="en-title">Grand Total</span></th>
+                        <td id="td_total" style="font-weight: bold; color: #c00; font-size: 15px;">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="section-title">三、短期補習服務定型化契約應記載條款 (中英對照)</div>
+            <div class="legal-box">
+                <div class="legal-item">
+                    <strong>第一條：契約收受確認與審閱 / Acknowledgment of Contract Receipt：</strong><br>
+                    甲方確認於實際上課日前已收受並攜回本契約原本審閱至少五日。本課程為一般系統化正規美語進度班，非屬保證班（無特定保證內容、無保證考取或保證期間等承諾）。<br>
+                    <span class="legal-en">Party A acknowledges receipt of this contract for review at least five days prior to classes. This course is a standard systematic progression class and is NOT a guaranteed success program.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第二條：插班日與修業期間認定 / Late Enrollment & Course Period：</strong><br>
+                    修業期間自立約登載之開課日起算。課程開始後始報名插班者，應以報名後最近一次上課日作為開課日，並以該課程剩餘期間及未上課時數作為總時數比例計費。<br>
+                    <span class="legal-en">The course period starts from the designated start date. For students registering after the course has commenced, the immediate next class date after registration shall be recognized as the start date.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第三條：專業師資保障與更換限制 / Faculty Qualifications & Replacement Limit：</strong><br>
+                    乙方所聘任之教學人員（如 Teacher Bobby、Teacher Joy 等）皆具備合格教學資格與實名防查登記。乙方無正當事由不得任意更換教學人員，更換時人數不得超過原聘總教學人員三分之一，且須以相同專業資格者為限。<br>
+                    <span class="legal-en">Instructors (e.g., Teacher Bobby, Teacher Joy) are fully qualified with clear real-name criminal records. Instructors shall not be replaced without justification; replacement is strictly capped at 1/3 and restricted to equivalent qualifications.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第四條：上課地點與人數上限保障 / Location & Class Size Limit：</strong><br>
+                    乙方應於經核准之法定班址（桃園市桃園區莊二街156號1樓）教室上課。為維護教學品質，每班實際上課人數上限應嚴格遵守政府法令規範。因可歸責於乙方之事由（如教師請假、排課錯誤等）暫時調動既定上課時間，致甲方無法配合而缺課者，乙方應予以補課、提供補課錄影，或經比例計算後返還該節課程費用。<br>
+                    <span class="legal-en">Classes must be held at the approved location. The class size shall strictly comply with government regulations. If a class is rescheduled due to reasons attributable to the school and the student cannot attend, the school must provide make-up classes, recordings, or proportional refunds.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第五條：依約收費手續與贈品規範 / Fees Collection & Promotional Gifts：</strong><br>
+                    乙方收取費用應開立正式收據。繳費項目未明列於契約者，乙方不得收取。如因繳費而獲得之贈品（價值不得逾繳費總金額20%），於契約終止或解除時，乙方不得向甲方請求返還該贈品，亦不得扣除該贈品價額。<br>
+                    <span class="legal-en">Official receipts must be issued. Fees not specified in the contract shall not be collected. Promotional gifts (value capped at 20% of total fees) are non-returnable and non-deductible upon contract termination.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第六條：桃園市法定退費標準 / Legal Refund Policy (Taoyuan City Regulations)：</strong><br>
+                    依據「桃園市短期補習班退費管理自治條例」第三條規範，因個人因素離班者，乙方應於要求退費之日起七日內依下列標準退費：<br>
+                    (1) 學生於實際開課日前第30日以前要求退費者，應退還當期依約繳納費用之總額 (100% refund if requested 30 days or more prior to the start date).<br>
+                    (2) 學生於實際開課日前第1日至第29日要求退費者，應退還當期依約繳納費用總額之百分之九十，但補習班收取金額以新臺幣一千元為限，超過部分仍應退還 (90% refund if requested within 1-29 days prior; kept amount capped at NT$1,000).<br>
+                    (3) 學生於實際開課日起五日內要求退費者，應退還當期依約繳納費用總額之百分之八十 (80% refund if requested within the first 5 days of class).<br>
+                    (4) 學生於實際開課日起第六日至全期或總課程時數之三分之一期間內要求退費者，應退還百分之五十 (50% refund from the 6th day until 1/3 of the course term).<br>
+                    (5) 逾全期或總課程時數之三分之一者，所收取之費用得全數不予退還 (No refund after 1/3 of the course term has passed).<br>
+                    代辦之教材費若已購置且已發放予甲方者，恕不予退還，教材歸甲方所有 (Distributed textbooks/materials are completely non-refundable and belong to the student).
+                    <span class="legal-en">Refunds are processed strictly within 7 days according to Taoyuan City regulations. Distributed materials are non-refundable.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第七條：請假規範與無故缺課處理 / Absence and Unexcused Absences：</strong><br>
+                    學員因病、事假未能出席，家長須於上課前兩小時透過官方 LINE 或電話完成請假。完成正當請假者，本班將提供一對一或小組補課輔導。未依規定請假而無故缺課（曠課）者，視同放棄該堂課程權益，不另行安排補課，亦不予扣除學費或退費。<br>
+                    <span class="legal-en">Parents must request leave via official LINE or phone at least 2 hours prior to class. Instructors will arrange make-up tutoring for approved leaves; unexcused absences constitute a waiver of rights with no make-ups or refunds.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第八條：違規行為處置與契約終止 / Termination and Student Conduct：</strong><br>
+                    學員於修業期間應遵守課堂秩序。若有互毆、竊盜、吸毒販毒、嚴重破壞公物或其他違法行為經查屬實且情節重大者，乙方得終止本契約，並依第六條退費規定辦理。若乙方有歇業、停辦、或教室經公共安全檢查勒令停止使用者，應按賸餘課程時數比例核算退還費用。<br>
+                    <span class="legal-en">Party A must maintain order. For major disruptions, thefts, or illegal acts, Party B may terminate the contract and issue refunds according to Article 6. If Party B closes, suspends, or location becomes unsafe, proportional refunds must be issued.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第九條：個人資料保護與肖像授權 / Privacy Protection & Portrait Rights：</strong><br>
+                    未經甲方書面同意，乙方不得擅自將甲方個資提供給第三人或作不當利用。乙方應嚴格遵守《個人資料保護法》。甲方同意並合理授權乙方得於教學活動、節慶成果中進行拍照及錄影，合理使用於補習班內部學習成果展示或官方網站招生推廣，且承諾絕不損及學生名譽。<br>
+                    <span class="legal-en">Data handling must fully comply with the Personal Data Protection Act. Party A agrees that Party B may take photos/videos during classes or events for achievement displays or promotions, provided it doesn't harm the student's reputation.</span>
+                </div>
+                <div class="legal-item">
+                    <strong>第十條：疑義處理與合約保存期限 / Interpretation & Duplicates Preservation：</strong><br>
+                    本契約各條款如有疑義時，應依消費者保護法第十一條第二項規定，為有利甲方之解釋。本契約一式二份，由甲乙雙方各執一份為憑。雙方同意契約約定保存期限為五年（不得少於稅捐稽徵法規定之五年）。<br>
+                    <span class="legal-en">Doubts regarding clauses shall lean in favor of the consumer based on the Consumer Protection Act. This contract is executed in duplicate, and must be preserved for at least 5 years.</span>
+                </div>
+            </div>
+
+            <div class="agreement-banner">
+                【重要法律聲明】 學生為限制行為能力人時，須得法定代理人允許或承認；為無行為能力人時，應由其法定代理人代為或代受意思表示。家長/監護人於下方手寫簽章即視為已完全允許、承認並代為履行本契約之所有權利與義務。<br>
+                <span style="font-size: 11px; font-weight: normal; display: block; margin-top: 3px; font-style: italic;">Mandatory Legal Notice: If the student is a minor, this contract must be acknowledged by the legal guardian. Signature below implies full authorization and acknowledgment of all contractual terms.</span>
+            </div>
+
+            <div class="section-title">四、家長/監護人親筆劃布手寫電子簽章艙 / Electronic Signature Pad</div>
+            <p style="font-size: 12px; color: #c00; font-weight: bold; margin: 0 0 8px 4px;">⚠️ 請家長/監護人確認上述內容無誤後，在下方白色方框內親筆簽名：</p>
+            
+            <div class="signature-canvas-container">
+                <canvas id="sigPad"></canvas>
+                <button type="button" class="canvas-clear-btn" onclick="clearSigPad()">清除重簽 / Clear</button>
+            </div>
+
+            <!-- 🔒 乙方補習班法定登載天線 -->
+            <div style="margin-top: 20px; font-size: 12px; color: #555; border-top: 1px solid #ccc; padding-top: 15px; line-height: 1.6;">
+                <b>補習班全銜 (Party B)：</b>巴比美語短期補習班 (Bobby English Cram School) <br>
+                <b>負責人兼設立代表人：</b>巴比主任 / 經辦人員：Joy <br>
+                <b>設立核准立案字號：</b>府教社字第0930131461號 | <b>聯絡電話：</b>03-2161338 <br>
+                <b>立案地址：</b>330 桃園市桃園區莊二街156號1樓 <br>
+                <b>電子合約正式生效日期 (Date of Agreement)：</b><span id="currentDateDisplay" style="font-weight: bold; color: var(--uci-blue);"></span>
+            </div>
+
+            <div class="submit-btn-container">
+                <button type="submit" id="submitBtn" class="submit-btn">確認條款並電子送出合約 / Submit Signed Contract</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+// ===== 2026 巴比美語核定收費總庫（100% 精準對齊） =====
+var courseBrainDatabase = {
+    "Let's Go 1": { tuition: 31620, materials: 1268, misc: 3060, total: 35948, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 1:30 PM - 3:30 PM)" },
+    "Let's Go 2": { tuition: 31620, materials: 1268, misc: 3060, total: 35948, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 1:30 PM - 3:30 PM)" },
+    "Let's Go 3": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)" },
+    "Let's Go 4": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)" },
+    "Let's Go 5": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)" },
+    "Let's Go 6": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)" },
+    "Advance A1": { tuition: 26180, materials: 2966, misc: 2040, total: 31186, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週三、週五 4:30 PM - 6:30 PM)" },
+    "Advance A2": { tuition: 29260, materials: 3826, misc: 2280, total: 35366, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四 4:30 PM - 6:30 PM)" },
+    "Advance B1 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
+    "Advance B1 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
+    "Advance B2 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
+    "Advance B2 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
+    "Advance C1 新進": { tuition: 14450, materials: 1840, misc: 850, total: 17140, schedule: "每週授課1次，每次2小時，每週共計2小時 (每週星期一晚上 7:00 - 9:00 PM)" },
+    "Advance C1 晉升": { tuition: 14450, materials: 500, misc: 850, total: 15800, schedule: "每週授課1次，每次2小時，每週共計2小時 (每週星期一晚上 7:00 - 9:00 PM)" }
+};
+
+// ===== HTML5 觸控手寫簽名核心引擎 =====
+var canvas = document.getElementById('sigPad');
+var ctx = canvas.getContext('2d');
+var isDrawing = false;
+
+function resizeCanvas() {
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+    ctx.strokeStyle = "#1b3d6d";
+    ctx.lineWidth = 3;
+    ctx.lineCap = "round";
+}
+
+canvas.addEventListener('mousedown', function(e) { isDrawing = true; draw(e.offsetX, e.offsetY); });
+canvas.addEventListener('mousemove', function(e) { if(isDrawing) draw(e.offsetX, e.offsetY); });
+window.addEventListener('mouseup', function() { isDrawing = false; ctx.beginPath(); });
+
+canvas.addEventListener('touchstart', function(e) {
+    isDrawing = true;
+    var t = e.touches[0];
+    var rect = canvas.getBoundingClientRect();
+    draw(t.clientX - rect.left, t.clientY - rect.top);
+}, {passive: true});
+canvas.addEventListener('touchmove', function(e) {
+    if(!isDrawing) return;
+    var t = e.touches[0];
+    var rect = canvas.getBoundingClientRect();
+    draw(t.clientX - rect.left, t.clientY - rect.top);
+}, {passive: true});
+canvas.addEventListener('toucheng', function() { isDrawing = false; ctx.beginPath(); });
+
+function draw(x, y) {
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+}
+
+function clearSigPad() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// ===== 萬用智慧連動同步晶片 =====
+function syncCourseBrain() {
+    var courseKey = document.getElementById('courseSelector').value;
+    var data = courseBrainDatabase[courseKey];
+    
+    if(data) {
+        // 更新畫面欄位
+        document.getElementById('td_schedule').innerText = data.schedule;
+        document.getElementById('td_tuition').innerText = "NT$ " + data.tuition.toLocaleString() + " 元";
+        document.getElementById('td_materials').innerText = "NT$ " + data.materials.toLocaleString() + " 元";
+        document.getElementById('td_misc').innerText = "NT$ " + data.misc.toLocaleString() + " 元";
+        document.getElementById('td_total').innerText = "NT$ " + data.total.toLocaleString() + " 元";
+        
+        // 將數據壓入隱形傳輸天線，確保 FormSubmit 資料夾完美分類
+        document.getElementById('hidden_tuition').value = data.tuition + " 元";
+        document.getElementById('hidden_materials').value = data.materials + " 元";
+        document.getElementById('hidden_misc').value = data.misc + " 元";
+        document.getElementById('hidden_schedule').value = data.schedule;
+        
+        document.getElementById('formSubject').value = "【電子合約核定】巴比美語 (" + courseKey + ") 定型化契約回傳成功";
+        document.getElementById('dynamicBannerDisplay').innerHTML = TARGET_COURSE_PREFIX + " ｜ " + courseKey + " 線上定型化契約書";
+    }
+}
+
+// ===== 發射前最後安全防呆驗證 =====
+function prepareSubmit(event) {
+    event.preventDefault();
+    
+    var blank = document.createElement('canvas');
+    blank.width = canvas.width;
+    blank.height = canvas.height;
+    if (canvas.toDataURL() === blank.toDataURL()) {
+        alert("⚠️ 請家長/監護人完成親筆電子簽章後，再點擊送出合約！\nPlease sign the contract before submitting.");
+        return false;
+    }
+    
+    // 將簽名壓縮編碼並射入隱形回傳通道
+    document.getElementById('signature_base64').value = canvas.toDataURL();
+    
+    document.getElementById('submitBtn').innerText = "正在傳准巴比雲端中央合約儲存夾...";
+    document.getElementById('submitBtn').disabled = true;
+    document.getElementById('contractForm').submit();
+}
+
+var TARGET_COURSE_PREFIX = "2026 全班別通用型";
+
+window.onload = function() {
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    var today = new Date();
+    document.getElementById('currentDateDisplay').innerText = today.getFullYear() + " 年 " + (today.getMonth() + 1) + " 月 " + today.getDate() + " 日";
+    
+    syncCourseBrain();
+};
+</script>
+</body>
+</html>
