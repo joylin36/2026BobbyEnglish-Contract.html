@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- 🎯 全載具核心天線：加入最標準的縮放網頁視窗雷達，確保行動裝置完美適應 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>巴比美語補習班 | 短期補習服務定型化契約書</title>
+    <title>私立巴比美語短期補習班 | 短期補習服務定型化契約書</title>
     <style>
         :root {
             --uci-blue: #1b3d6d;
@@ -214,32 +214,6 @@
             border-radius: 4px;
         }
 
-        .pyp-badge {
-            background-color: transparent;
-            border-left: none;
-            padding: 5px 15px;
-            margin: 20px 0;
-            border-radius: 0;
-            text-align: center;
-        }
-
-        .pyp-badge h4 {
-            margin: 0 0 6px 0;
-            color: var(--soft-red);
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.4;
-            text-align: center;
-        }
-
-        .pyp-badge p {
-            margin: 0 0 6px 0;
-            font-size: 13.5px;
-            color: #333;
-            line-height: 1.6;
-            text-align: center;
-        }
-
         .submit-btn-container {
             text-align: center;
             margin-top: 30px;
@@ -284,14 +258,14 @@
 
         <!-- 教育部範本必備行政隱形傳輸天線 -->
         <input type="hidden" id="hidden_tuition" name="[收費明細] 學費">
-        <input type="hidden" id="hidden_materials" name="[收釋明細] 教材講義費">
+        <input type="hidden" id="hidden_materials" name="[收費明細] 教材講義費">
         <input type="hidden" id="hidden_misc" name="[收費明細] 學雜費">
         <input type="hidden" id="hidden_schedule" name="[核定修業] 上課時段">
 
         <div class="page">
             <div class="contract-header">
-                <h1>巴比美語短期補習班 ｜ 短期補習服務契約書</h1>
-                <h2>Bobby English Cram School - Short-Term Tuition Service Contract</h2>
+                <h1>私立巴比美語短期補習班 ｜ 短期補習服務契約書</h1>
+                <h2>Bobby English School - Short-Term Tuition Service Contract</h2>
                 <p style="font-size: 11px; color: #666; margin: 10px 0 0 0;">(依據教育部短期補習班補習服務契約書範本與桃園市最新設立及管理法規制定-2026年9月版)</p>
             </div>
 
@@ -326,7 +300,8 @@
                 </tbody>
             </table>
 
-            <div class="section-title">二、就讀班級與智慧計費雷達 / Course & Billing Selector</div>
+            <!-- 🔧 依照指令 1：修改標題為「二、就讀班級與學費計算 / Course & Billing」 -->
+            <div class="section-title">二、就讀班級與學費計算 / Course & Billing</div>
             <table>
                 <tbody>
                     <tr>
@@ -352,8 +327,9 @@
                     </tr>
                     <tr>
                         <th><span class="zh-title">課程科目內容</span><span class="en-title">Course Content</span></th>
-                        <td colspan="3" style="font-size: 12px; color: #555;">
-                            兒童/青少年美語特訓 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)
+                        <!-- 🔧 依照指令 3：右邊填空欄位改為動態連動，文字會跟隨選讀班別自動切換 -->
+                        <td id="td_course_content" colspan="3" style="font-size: 12px; color: #0077b6; font-weight: bold; background-color: rgba(0, 119, 182, 0.02);">
+                            載入科目中...
                         </td>
                     </tr>
                     <tr>
@@ -375,7 +351,8 @@
                 </tbody>
             </table>
 
-            <div class="section-title">三、短期補習服務定型化契約應記載條款 (中英對照 ✕ 實名制升級完全體)</div>
+            <!-- 🔧 依照指令 2：中文標籤全刪除，改用完整官方英文翻譯 -->
+            <div class="section-title">三、短期補習服務定型化契約應記載條款 / Short-Term Cram School Services Model Contract Mandatory Provisions</div>
             <div class="legal-box">
                 <div class="legal-item">
                     <strong>前言：契約收受確認 / Preamble: Acknowledgment of Contract Receipt：</strong><br>
@@ -411,12 +388,12 @@
                 </div>
                 
                 <div class="legal-item">
-                    <strong>第五條：桃園市法定退費標準 / Article 5: Refund Policy and Regulations (Taoyuan City Standard)：</strong><br>
+                    <strong>5. 桃園市法定退費標準 / Article 5: Refund Policy and Regulations (Taoyuan City Standard)：</strong><br>
                     依據「桃園市短期補習班退費管理自治條例」規定，學員因個人因素離班者，補習班應於要求退費之日起七日內辦理退費，標準如下：<br>
                     (1) 實際開課日前第30日以前要求退費者：應退還當期開班依約繳納費用之總額。<br>
                     (2) 實際開課日前第1日至第29日要求退費者：應退還當期開班依約繳納費用總額之百分之九十。但所收取金額以新臺幣一千元為限，超過部分仍應退還。<br>
                     (3) 實際開課日起5日內要求退費者：應退還當期開班依約繳納費用總額之百分之八十。<br>
-                    (4) 實際開課日起之第六日，至全期或總課程時數之三分之一期間內要求退費者：應退還當期開班依約繳納費用總額之百分之五十。<br>
+                    (4) 實際開課日起之第六日，至全期或總課程時數之三分之一期間內要求退費者：應退還當期開班依約繳納費用總額之百分之五十五十。<br>
                     (5) 已逾全期或總課程時數之三分之一者：所收取之當期費用，得全數不予退還。<br>
                     (6) 代辦之教材費若已購置且已發放予甲方者，不予退還，教材歸甲方所有。<br>
                     <span class="legal-en">In accordance with the Taoyuan City Short-Term Cram School Refund Regulations, if a student leaves due to personal factors, refunds shall be processed within 7 days based on the following standards:<br>(1) Requested 30 days or more before the class start date: Full 100% refund of total fees paid.<br>(2) Requested within 1 to 29 days before the start date: 90% refund of the total fees paid (the amount retained by the school is capped at NT$1,000, and any excess must be refunded).<br>(3) Requested within 5 days from the start date: 80% refund of the total fees paid.<br>(4) Requested from the 6th day until 1/3 of the total course term: 50% refund of the total fees paid.<br>(5) Requested after 1/3 of the total course term: Total fees collected may be entirely non-refundable.<br>(6) If purchased materials or textbooks have already been issued to the student, they are non-refundable and belong to the student.</span>
@@ -453,7 +430,7 @@
                 <div class="legal-item">
                     <strong>第十條：肖像權合理授權與個資隱私保護 / Article 10: Portrait Rights and Personal Data Privacy Protection：</strong><br>
                     1. 甲方同意乙方於課堂教學、節慶活動或成果發表中進行拍照及錄影，並授權乙方得將其影像合理使用於補習班內部學習成果展示、官方網站或招生推廣文宣，且不損及學生名譽。<br>
-                    2. 未經甲方書面同意，乙方不得擅自將甲方個人資料提供給第三人或作不當利用。乙方應嚴格遵守《個人資料保護法》之規定，僅用於教學行政與聯絡。<br>
+                    2. 未經甲方書面同意，乙方不得擅自將甲方個人資料提供給第三人或作不當利用。乙方應严格遵守《個人資料保護法》之規定，僅用於教學行政與聯絡。<br>
                     <span class="legal-en">1. Party A agrees that Party B may take photos and videos during classes, holiday events, or achievement presentations, and authorizes Party B to reasonably use the images for internal displays, the official website, or promotional marketing materials, provided it doesn't harm the student's reputation.<br>2. Without explicit written consent, Party B shall not provide personal data of Party A to third parties or utilize it improperly. Party B must strictly handle all data in full compliance with the Personal Data Protection Act solely for tutoring administration and communication.</span>
                 </div>
                 
@@ -470,14 +447,10 @@
                 <span style="font-size: 11px; font-weight: normal; display: block; margin-top: 3px; font-style: italic;">Mandatory Legal Notice: If the student is a minor with limited or no capacity, this contract must be signed/acknowledged by the legal guardian. Signature below implies full authorization and acknowledgment of all contractual rights and obligations.</span>
             </div>
 
-            <!-- 🎯 體驗課號角置中區塊 -->
-            <div class="pyp-badge">
-                <h4>🎯 預約巴比老師專屬體驗課 | Book Your Trial Lesson Today</h4>
-                <p>現在就幫孩子預約巴比老師的體驗，踏出大膽開口的第一步！</p>
-                <span style="color: #444; font-weight: bold; font-size: 12px; display: block; margin-top: 4px;">Book a trial lesson with Teacher Bobby today and take the first step toward bold fluency! Join us now!</span>
-            </div>
+            <!-- 🔧 依照指令 4：原「🎯 預約巴比老師專屬體驗課……」整段看板已全數刪除不留痕跡 -->
 
-            <div class="section-title">四、家長/監護人親筆劃布手寫電子簽章艙 / Electronic Signature Pad</div>
+            <!-- 🔧 依照指令 5：修改標題為「四、家長/監護人簽章艙 / Electronic Signature Pad」 -->
+            <div class="section-title">四、家長/監護人簽章艙 / Electronic Signature Pad</div>
             <p style="font-size: 12px; color: #c00; font-weight: bold; margin: 0 0 8px 4px;">⚠️ 請家長/監護人確認上述內容無誤後，在下方白色方框內親筆簽名：</p>
             
             <div class="signature-canvas-container">
@@ -485,9 +458,9 @@
                 <button type="button" class="canvas-clear-btn" onclick="clearSigPad()">清除重簽 / Clear</button>
             </div>
 
-            <!-- 🔒 乙方補習班法定登載天線 (🎨 🔧 依照黃金指令：精準變更負責人兼班主任身分) -->
+            <!-- 🔒 乙方補習班法定登載天線 (🔧 依照指令 6：修改補習班全銜為「私立巴比美語短期補習班 (Bobby English School)」) -->
             <div style="margin-top: 20px; font-size: 12px; color: #555; border-top: 1px solid #ccc; padding-top: 15px; line-height: 1.6;">
-                <b>補習班全銜 (Party B)：</b>巴比美語短期補習班 (Bobby English Cram School)<br>
+                <b>補習班全銜：</b>私立巴比美語短期補習班 (Bobby English School)<br>
                 <b>負責人兼設立代表人：</b>巴比班主任 (林婷玉) / 經辦人員：Joy (林婷玉) <br>
                 <b>設立核准立案字號：</b>府教社字第0930131461號 | <b>聯絡電話：</b>03-2161338<br>
                 <b>立案地址：</b>330 桃園市桃園區莊二街156號1樓<br>
@@ -502,22 +475,22 @@
 </div>
 
 <script>
-// ===== 2026 巴比美語核定收費總庫 =====
+// ===== 2026 巴比美語核定收費與動態教材科目內容大資料庫 =====
 var courseBrainDatabase = {
-    "Let's Go 1": { tuition: 31620, materials: 1268, misc: 3060, total: 35948, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 1:30 PM - 3:30 PM)" },
-    "Let's Go 2": { tuition: 31620, materials: 1268, misc: 3060, total: 35948, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 1:30 PM - 3:30 PM)" },
-    "Let's Go 3": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)" },
-    "Let's Go 4": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)" },
-    "Let's Go 5": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)" },
-    "Let's Go 6": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)" },
-    "Advance A1": { tuition: 26180, materials: 2966, misc: 2040, total: 31186, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週三、週五 4:30 PM - 6:30 PM)" },
-    "Advance A2": { tuition: 29260, materials: 3826, misc: 2280, total: 35366, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四 4:30 PM - 6:30 PM)" },
-    "Advance B1 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
-    "Advance B1 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
-    "Advance B2 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
-    "Advance B2 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)" },
-    "Advance C1 新進": { tuition: 14450, materials: 1840, misc: 850, total: 17140, schedule: "每週授課1次，每次2小時，每週共計2小時 (每週星期一晚上 7:00 - 9:00 PM)" },
-    "Advance C1 晉升": { tuition: 14450, materials: 500, misc: 850, total: 15800, schedule: "每週授課1次，每次2小時，每週共計2小時 (每週星期一晚上 7:00 - 9:00 PM)" }
+    "Let's Go 1": { tuition: 31620, materials: 1268, misc: 3060, total: 35948, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 1:30 PM - 3:30 PM)", content: "Let's Go 1 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
+    "Let's Go 2": { tuition: 31620, materials: 1268, misc: 3060, total: 35948, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 1:30 PM - 3:30 PM)", content: "Let's Go 2 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
+    "Let's Go 3": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)", content: "Let's Go 3 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
+    "Let's Go 4": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)", content: "Let's Go 4 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
+    "Let's Go 5": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)", content: "Let's Go 5 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
+    "Let's Go 6": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)", content: "Let's Go 6 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
+    "Advance A1": { tuition: 26180, materials: 2966, misc: 2040, total: 31186, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週三、週五 4:30 PM - 6:30 PM)", content: "Advance A1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance A2": { tuition: 29260, materials: 3826, misc: 2280, total: 35366, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四 4:30 PM - 6:30 PM)", content: "Advance A2 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance B1 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)", content: "Advance B1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance B1 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)", content: "Advance B1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance B2 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)", content: "Advance B2 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance B2 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)", content: "Advance B2 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance C1 新進": { tuition: 14450, materials: 1840, misc: 850, total: 17140, schedule: "每週授課1次，每次2小時，每週共計2小時 (每週星期一晚上 7:00 - 9:00 PM)", content: "Advance C1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance C1 晉升": { tuition: 14450, materials: 500, misc: 850, total: 15800, schedule: "每週授課1次，每次2小時，每週共計2小時 (每週星期一晚上 7:00 - 9:00 PM)", content: "Advance C1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" }
 };
 
 // ===== HTML5 觸控手寫簽名核心引擎 =====
@@ -568,12 +541,17 @@ function syncCourseBrain() {
     var data = courseBrainDatabase[courseKey];
     
     if(data) {
+        // 更新畫面欄位
         document.getElementById('td_schedule').innerText = data.schedule;
         document.getElementById('td_tuition').innerText = "NT$ " + data.tuition.toLocaleString() + " 元";
         document.getElementById('td_materials').innerText = "NT$ " + data.materials.toLocaleString() + " 元";
         document.getElementById('td_misc').innerText = "NT$ " + data.misc.toLocaleString() + " 元";
         document.getElementById('td_total').innerText = "NT$ " + data.total.toLocaleString() + " 元";
         
+        // 🔧 依照指令 3：將課程科目內容也加入動態變更，隨著選擇的級數自動切換文字描述
+        document.getElementById('td_course_content').innerText = data.content;
+        
+        // 將數據壓入隱形傳輸天線
         document.getElementById('hidden_tuition').value = data.tuition + " 元";
         document.getElementById('hidden_materials').value = data.materials + " 元";
         document.getElementById('hidden_misc').value = data.misc + " 元";
@@ -638,6 +616,7 @@ window.onload = function() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     
+    // 🔧 驗證確認：動態即時雷達會自動抓取打開文件當下的世界時間更新，完全不需要手動修改
     var today = new Date();
     document.getElementById('currentDateDisplay').innerText = today.getFullYear() + " 年 " + (today.getMonth() + 1) + " 月 " + today.getDate() + " 日";
     
