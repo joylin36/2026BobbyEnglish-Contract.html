@@ -214,9 +214,34 @@
             border-radius: 4px;
         }
 
-        /* ================================================================= */
-        /* 🚨 🔧 依照指令 1：加入剛性 A4 防跑版列印保護晶片，鎖定完整內容不走位 */
-        /* ================================================================= */
+        /* 👑 🎨 完美修復：重新加回「確認條款並電子送出合約」黃金造型按鈕 CSS 晶片 */
+        .submit-btn-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .submit-btn {
+            background-color: var(--uci-gold);
+            color: var(--uci-blue);
+            border: none;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* 🔒 剛性 A4 防跑版列印保護晶片 */
         @media print {
             body {
                 background-color: #fff;
@@ -230,23 +255,23 @@
             }
             .page {
                 padding: 10mm 15mm !important;
-                width: 210mm; /* 鎖定 A4 寬度 */
+                width: 210mm; 
             }
             .legal-box {
-                height: auto !important; /* 🔧 列印時解開捲動軸封印，讓法規完整展開 */
+                height: auto !important; 
                 overflow-y: visible !important;
                 border: none;
                 background-color: #fff;
                 padding: 0;
             }
             .legal-item {
-                page-break-inside: avoid; /* 防止法規條款被中間攔腰切斷跨頁 */
+                page-break-inside: avoid; 
             }
             .canvas-clear-btn, .submit-btn-container {
-                display: none !important; /* 列印紙本時隱藏點擊送出按鈕 */
+                display: none !important; 
             }
             .signature-canvas-container {
-                border: 1px solid var(--uci-blue); /* 手寫板框線改為實線 */
+                border: 1px solid var(--uci-blue); 
             }
             th {
                 -webkit-print-color-adjust: exact;
@@ -377,14 +402,16 @@
                     <span class="legal-en">1. The enrolled class name under this contract shall be based on the dynamic course plan checked by Party A. This course is a standard systematic progression class and is NOT a "guaranteed success" or "warranty" program (No specific guarantee contents, guaranteed pass, or warranty period commitments shall apply).</span>
                 </div>
                 
+                <!-- 🎯 🔧 依照最高指示 2：法規本文內文同步加裝智慧天線，讓科目英文說明與內文也動態連動切換 -->
                 <div class="legal-item">
                     <strong>第二條：課程科目、內容與授課時數 / Article 2: Course Subjects, Content, and Weekly Hours：</strong><br>
-                    1. 課程科目內容：Let's Go 兒童美語/Advance青少年進階美語（涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫、英檢練習訓練）[cite: 1]。<br>
-                    2. 每週授課時數：時數、班別與時間依據所選班級對應之課表辦理[cite: 1]。<br>
+                    1. 課程科目內容：<span id="legal_course_content" style="color: #0077b6; font-weight: bold;">自動連動加載中...</span><br>
+                    2. 每週授課時數：時數、班別與時間依據所選班級對應之課表辦理。<br>
                     3. 班級編制：採精緻小班制教學，每班實際點名上課人數上限嚴格遵守政府法令規範，以確保教學品質。<br>
-                    <span class="legal-en">1. Course Subject Content: Let's Go Children's English / Advance Junior English (including advanced Phonics, situational dialogues, listening, speaking, reading, writing, and intensive test preparation training)[cite: 1].<br>2. Weekly Hours: The weekly schedule and class hours shall correspond strictly to the official class timetable designated for the selected course[cite: 1].<br>3. Class Size: Exquisite small-class system. The number of students per class shall strictly comply with government regulatory limitations to ensure teaching quality.</span>
+                    <span class="legal-en">1. Course Subject Content: <span id="legal_course_content_en" style="font-style: italic;">Loading legal terminology...</span><br>2. Weekly Hours: The weekly schedule and class hours shall correspond strictly to the official class timetable designated for the selected course[cite: 1].<br>3. Class Size: Exquisite small-class system. The number of students per class shall strictly comply with government regulatory limitations to ensure teaching quality.</span>
                 </div>
                 
+                <!-- 🎯 🔧 依照最高指示 1：完美同步正式開課日為 08 月 31 日，與招生廣告毫無偏差 -->
                 <div class="legal-item">
                     <strong>第三條：修業期間、開課日與插班機制 / Article 3: Course Period, Start Date, and Acknowledgment：</strong><br>
                     1. 修業期間自民國115年09月起至課程結束止。實際正式開課日為民國115年08月31日，前項期間或開課日之認定，以甲乙雙方約定為準.<br>
@@ -402,7 +429,7 @@
                     <strong>第五條：桃園市法定退費標準 / Article 5: Refund Policy and Regulations (Taoyuan City Standard)：</strong><br>
                     依據「桃園市短期補習班退費管理自治條例」規定，學員因個人因素離班者，補習班應於要求退費之日起七日內辦理退費，標準如下：<br>
                     (1) 實際開課日前第30日以前要求退費者：應退還當期開班依約繳納費用之總額。<br>
-                    (2) 實際開課日前第1日至第29日要求退費者：應退還當期開班依約繳納費用總額之百分之九近十。但所收取金額以新臺幣一千元為限，超過部分仍應退還。<br>
+                    (2) 實際開課日前第1日至第29日要求退費者：應退還當期開班依約繳納費用總額之百分之九十。但所收取金額以新臺幣一千元為限，超過部分仍應退還。<br>
                     (3) 實際開課日起5日內要求退費者：應退還當期開班依約繳納費用總額之百分之八十。<br>
                     (4) 實際開課日起之第六日，至全期或總課程時數之三分之一期間內要求退費者：應退還當期開班依約繳納費用總額之百分之五十。<br>
                     (5) 已逾全期或總課程時數之三分之一者：所收取之當期費用，得全數不予退還。<br>
@@ -433,7 +460,7 @@
                 </div>
                 
                 <div class="legal-item">
-                    <strong>第九條：違規行為處置與班級秩序終止 / Article 9: Student Conduct and Contract Termination：</strong><br>
+                    <strong>第九條：違規行為處置與班級秩序終止 / Article 9: Termination and Student Conduct：</strong><br>
                     甲方於修業期間應遵守課堂秩序，不得有干擾他人學習、破壞公物之行為。若有嚴重危害班級安全、竊奪或違法行為且屢勸不聽者，乙方得終止本契約，並依第七條（即本定型化契約第五條）退費手續辦理。<br>
                     <span class="legal-en">Party A must strictly maintain classroom order during the course period and shall not disrupt others' learning or vandalize public property. For major disruptions endangering safety, thefts, or illegal acts where repeated warnings fail, Party B may terminate this contract and issue refunds according to the refund policy.</span>
                 </div>
@@ -458,7 +485,6 @@
                 <span style="font-size: 11px; font-weight: normal; display: block; margin-top: 3px; font-style: italic;">Mandatory Legal Notice: If the student is a minor with limited or no capacity, this contract must be signed/acknowledged by the legal guardian. Signature below implies full authorization and acknowledgment of all contractual rights and obligations.</span>
             </div>
 
-            <!-- 🔧 依照指令 1：修改標題為「四、家長/監護人簽章區 / Parent or Legal Guardian Signature Pad」，徹底刪除「艙」字 -->
             <div class="section-title">四、家長/監護人簽章區 / Parent or Legal Guardian Signature Pad</div>
             <p style="font-size: 12px; color: #c00; font-weight: bold; margin: 0 0 8px 4px;">⚠️ 請家長/監護人確認上述內容無誤後，在下方白色方框內親筆簽名：</p>
             
@@ -476,6 +502,7 @@
                 <b>電子合約正式生效日期 (Date of Agreement)：</b><span id="currentDateDisplay" style="font-weight: bold; color: var(--uci-blue);"></span>
             </div>
 
+            <!-- 👑 🎨 造型按鈕歸位艙：完美重新渲染黃金圓角高質感外觀 -->
             <div class="submit-btn-container">
                 <button type="submit" id="submitBtn" class="submit-btn">確認條款並電子送出合約 / Submit Signed Contract</button>
             </div>
@@ -492,7 +519,7 @@ var courseBrainDatabase = {
     "Let's Go 4": { tuition: 31620, materials: 1572, misc: 3060, total: 36252, schedule: "每週授課3次，每次2小時，每週共計6小時 (週一 4:30-6:30 PM & 週三、週五 1:30-3:30 PM)", content: "Let's Go 4 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
     "Let's Go 5": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)", content: "Let's Go 5 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
     "Let's Go 6": { tuition: 31620, materials: 1612, misc: 3060, total: 36292, schedule: "每週授課3次，每次2小時，每週共計6小時 (每週一、週三、週五 4:30 PM - 6:30 PM)", content: "Let's Go 6 美語教學 (涵蓋 Phonics 自然發音進階、生活情境對話、聽說讀寫強化訓練)" },
-    "Advance A1": { tuition: 26180, materials: 2966, misc: 2040, total: 31186, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週三、週五 4:30 PM - 6:30 PM)", content: "Advance A1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
+    "Advance A1": { tuition: 26180, materials: 2966, misc: 2040, total: 31186, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週開、週五 4:30 PM - 6:30 PM)", content: "Advance A1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
     "Advance A2": { tuition: 29260, materials: 3826, misc: 2280, total: 35366, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四 4:30 PM - 6:30 PM)", content: "Advance A2 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
     "Advance B1 新進": { tuition: 31160, materials: 3240, misc: 2280, total: 36680, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)", content: "Advance B1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
     "Advance B1 晉升": { tuition: 31160, materials: 500, misc: 2280, total: 33940, schedule: "每週授課2次，每次2小時，每週共計4小時 (每週二、週四晚上 7:00 - 9:00 PM)", content: "Advance B1 (涵蓋 生活情境對話、聽說讀寫強化訓練、英檢練習等)" },
@@ -550,28 +577,33 @@ function syncCourseBrain() {
     var data = courseBrainDatabase[courseKey];
     
     if(data) {
-        // 📡 🔧 依照指令 2：攔截網址上的報名表折扣參數，如果報名表有傳過來金額，就自動同步覆蓋原價！
         var urlParams = new URLSearchParams(window.location.search);
         var customTuition = urlParams.get('tuition');
         var customMaterials = urlParams.get('materials');
         var customMisc = urlParams.get('misc');
         
-        // 判斷是否使用報名表傳來的優惠價，否則退回預設官方定價
         var finalTuition = customTuition ? parseInt(customTuition) : data.tuition;
         var finalMaterials = customMaterials ? parseInt(customMaterials) : data.materials;
         var finalMisc = customMisc ? parseInt(customMisc) : data.misc;
         var finalTotal = finalTuition + finalMaterials + finalMisc;
 
-        // 瞬間動態渲染更新合約畫面金額欄位
         document.getElementById('td_schedule').innerText = data.schedule;
         document.getElementById('td_tuition').innerText = "NT$ " + finalTuition.toLocaleString() + " 元";
         document.getElementById('td_materials').innerText = "NT$ " + finalMaterials.toLocaleString() + " 元";
         document.getElementById('td_misc').innerText = "NT$ " + finalMisc.toLocaleString() + " 元";
         document.getElementById('td_total').innerText = "NT$ " + finalTotal.toLocaleString() + " 元";
         
+        // 渲染選讀內容
         document.getElementById('td_course_content').innerText = data.content;
         
-        // 將動態計算後的金額同步塞入隱形傳輸後台，回傳給 FormSubmit 歸檔存證
+        // 🎯 🔧 依照最高指示 2：法規本文內文的第二條條款也同步動態注入中英文！
+        document.getElementById('legal_course_content').innerText = data.content;
+        if(courseKey.indexOf("Let's Go") !== -1) {
+            document.getElementById('legal_course_content_en').innerText = "Let's Go Children's English (including advanced Phonics, situational dialogues, listening, speaking, reading, writing, and intensive特訓 training).";
+        } else {
+            document.getElementById('legal_course_content_en').innerText = "Advance Junior English (including situational dialogues, intensive training in listening, speaking, reading, writing, and intensive test preparation training).";
+        }
+        
         document.getElementById('hidden_tuition').value = finalTuition + " 元";
         document.getElementById('hidden_materials').value = finalMaterials + " 元";
         document.getElementById('hidden_misc').value = finalMisc + " 元";
